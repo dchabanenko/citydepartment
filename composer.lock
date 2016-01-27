@@ -4,9 +4,111 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "841991f3a5cc608b7f9d83b9c927c024",
-    "content-hash": "2763f95241b463b728a052fd40c7ab67",
+    "hash": "0856d62919664d9cfac8cda43afd4165",
+    "content-hash": "acd47e85333e9abc028e9fb64f0bc56c",
     "packages": [
+        {
+            "name": "bmatzner/jquery-bundle",
+            "version": "2.1.1",
+            "target-dir": "Bmatzner/JQueryBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bmatzner/BmatznerJQueryBundle.git",
+                "reference": "c47ebfd993782560d425081d6866393274537953"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bmatzner/BmatznerJQueryBundle/zipball/c47ebfd993782560d425081d6866393274537953",
+                "reference": "c47ebfd993782560d425081d6866393274537953",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": ">=2.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Bmatzner\\JQueryBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Bernd Matzner",
+                    "email": "bernd@matznermatzner.de",
+                    "homepage": "http://berndmatzner.de"
+                }
+            ],
+            "description": "jQuery Bundle for Symfony2",
+            "homepage": "http://jquery.com/",
+            "keywords": [
+                "javascript",
+                "jquery",
+                "symfony"
+            ],
+            "time": "2014-05-05 16:19:00"
+        },
+        {
+            "name": "craue/formflow-bundle",
+            "version": "2.1.9",
+            "target-dir": "Craue/FormFlowBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craue/CraueFormFlowBundle.git",
+                "reference": "dc3ff410a7168228a98c49338639bb6ad9c17587"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craue/CraueFormFlowBundle/zipball/dc3ff410a7168228a98c49338639bb6ad9c17587",
+                "reference": "dc3ff410a7168228a98c49338639bb6ad9c17587",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2|~7.0",
+                "symfony/form": "^2.1.3",
+                "symfony/framework-bundle": "^2.1.3"
+            },
+            "require-dev": {
+                "doctrine/common": "~2.3",
+                "phpunit/phpunit": "~4.1|~5.0",
+                "sensio/framework-extra-bundle": "~2.1|~3.0",
+                "symfony/phpunit-bridge": "^2.8.1",
+                "symfony/symfony": "^2.1.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Craue\\FormFlowBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Raue",
+                    "email": "christian.raue@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/craue/CraueFormFlowBundle/contributors"
+                }
+            ],
+            "description": "Multi-step forms for your Symfony2 project.",
+            "homepage": "https://github.com/craue/CraueFormFlowBundle",
+            "keywords": [
+                "Symfony2",
+                "form",
+                "step",
+                "wizard"
+            ],
+            "time": "2015-12-29 17:31:25"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -858,6 +960,335 @@
             "time": "2014-01-12 16:20:24"
         },
         {
+            "name": "knplabs/knp-components",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/knp-components.git",
+                "reference": "4503275e4f1a0e9667aa65b0ebed842ef2d8d8ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/4503275e4f1a0e9667aa65b0ebed842ef2d8d8ba",
+                "reference": "4503275e4f1a0e9667aa65b0ebed842ef2d8d8ba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "~1.0@beta",
+                "doctrine/orm": "~2.4",
+                "phpunit/phpunit": "~4.2",
+                "ruflin/elastica": "~1.0",
+                "symfony/event-dispatcher": "~2.5"
+            },
+            "suggest": {
+                "doctrine/common": "to allow usage pagination with Doctrine ArrayCollection",
+                "doctrine/mongodb-odm": "to allow usage pagination with Doctrine ODM MongoDB",
+                "doctrine/orm": "to allow usage pagination with Doctrine ORM",
+                "propel/propel1": "to allow usage pagination with Propel ORM",
+                "ruflin/Elastica": "to allow usage pagination with ElasticSearch Client",
+                "solarium/solarium": "to allow usage pagination with Solarium Client"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Component": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/knp-components/contributors"
+                }
+            ],
+            "description": "Knplabs component library",
+            "homepage": "http://github.com/KnpLabs/knp-components",
+            "keywords": [
+                "components",
+                "knp",
+                "knplabs",
+                "pager",
+                "paginator"
+            ],
+            "time": "2015-09-01 10:54:53"
+        },
+        {
+            "name": "knplabs/knp-menu",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMenu.git",
+                "reference": "9917b999a3c3d3901386d60c4888b07679291031"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/9917b999a3c3d3901386d60c4888b07679291031",
+                "reference": "9917b999a3c3d3901386d60c4888b07679291031",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "pimple/pimple": "~1.0",
+                "silex/silex": "~1.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0",
+                "symfony/routing": "~2.3|~3.0",
+                "twig/twig": "~1.16|~2.0"
+            },
+            "suggest": {
+                "pimple/pimple": "for the built-in implementations of the menu provider and renderer provider",
+                "silex/silex": "for the integration with your silex application",
+                "twig/twig": "for the TwigRenderer and the integration with your templates"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Menu\\": "src/Knp/Menu"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "KnpLabs",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
+                }
+            ],
+            "description": "An object oriented menu library",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "menu",
+                "tree"
+            ],
+            "time": "2016-01-08 15:42:54"
+        },
+        {
+            "name": "knplabs/knp-menu-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
+                "reference": "96a6b9630e0f150f38ae167b3ef22955d8cdfab5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/96a6b9630e0f150f38ae167b3ef22955d8cdfab5",
+                "reference": "96a6b9630e0f150f38ae167b3ef22955d8cdfab5",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-menu": "~2.1",
+                "symfony/framework-bundle": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.4|~3.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Bundle\\MenuBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Knplabs",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/KnpMenuBundle/contributors"
+                }
+            ],
+            "description": "This bundle provides an integration of the KnpMenu library",
+            "keywords": [
+                "menu"
+            ],
+            "time": "2016-01-11 09:37:38"
+        },
+        {
+            "name": "knplabs/knp-paginator-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
+                "reference": "5147740faff4d32e6f42acf64475314c35320fa4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/5147740faff4d32e6f42acf64475314c35320fa4",
+                "reference": "5147740faff4d32e6f42acf64475314c35320fa4",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-components": "~1.2",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "twig/twig": "~1.12|~2"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.4|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Bundle\\PaginatorBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony2 Community",
+                    "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
+                }
+            ],
+            "description": "Paginator bundle for Symfony2 to automate pagination and simplify sorting and other features",
+            "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
+            "keywords": [
+                "Symfony2",
+                "bundle",
+                "knp",
+                "knplabs",
+                "pager",
+                "pagination",
+                "paginator"
+            ],
+            "time": "2015-11-23 17:51:40"
+        },
+        {
+            "name": "kriswallsmith/assetic",
+            "version": "v1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/assetic.git",
+                "reference": "9928f7c4ad98b234e3559d1049abd13387f86db5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/9928f7c4ad98b234e3559d1049abd13387f86db5",
+                "reference": "9928f7c4ad98b234e3559d1049abd13387f86db5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1",
+                "symfony/process": "~2.1|~3.0"
+            },
+            "conflict": {
+                "twig/twig": "<1.23"
+            },
+            "require-dev": {
+                "cssmin/cssmin": "3.0.1",
+                "joliclic/javascript-packer": "1.1",
+                "kamicane/packager": "1.0",
+                "leafo/lessphp": "^0.3.7",
+                "leafo/scssphp": "~0.1",
+                "mrclay/minify": "~2.2",
+                "patchwork/jsqueeze": "~1.0|~2.0",
+                "phpunit/phpunit": "~4.8",
+                "psr/log": "~1.0",
+                "ptachoire/cssembed": "~1.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0",
+                "twig/twig": "~1.8|~2.0"
+            },
+            "suggest": {
+                "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
+                "leafo/scssphp": "Assetic provides the integration with the scssphp SCSS compiler",
+                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin",
+                "patchwork/jsqueeze": "Assetic provides the integration with the JSqueeze JavaScript compressor",
+                "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
+                "twig/twig": "Assetic provides the integration with the Twig templating engine"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Assetic": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Asset Management for PHP",
+            "homepage": "https://github.com/kriswallsmith/assetic",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
+            ],
+            "time": "2015-11-12 13:51:40"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.17.2",
             "source": {
@@ -933,6 +1364,129 @@
                 "psr-3"
             ],
             "time": "2015-10-14 12:51:02"
+        },
+        {
+            "name": "mopa/bootstrap-bundle",
+            "version": "v3.0.0",
+            "target-dir": "Mopa/Bundle/BootstrapBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
+                "reference": "0205959643168208f3b313b2e00ca643441850b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/0205959643168208f3b313b2e00ca643441850b4",
+                "reference": "0205959643168208f3b313b2e00ca643441850b4",
+                "shasum": ""
+            },
+            "require": {
+                "mopa/composer-bridge": "~1.3",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/form": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/twig-bundle": "~2.3|~3.0",
+                "twig/twig": "^1.14.2"
+            },
+            "conflict": {
+                "symfony/twig-bridge": "<2.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6"
+            },
+            "suggest": {
+                "craue/formflow-bundle": "~2.0",
+                "knplabs/knp-menu-bundle": "~2.0@dev",
+                "knplabs/knp-paginator-bundle": "~2.3",
+                "mopa/bootstrap-sandbox-bundle": "~2.3",
+                "twbs/bootstrap": ">2.0,<4.0-dev",
+                "twbs/bootstrap-sass": "v3.1.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Mopa\\Bundle\\BootstrapBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/phiamo/MopaBootstrapBundle/contributors"
+                },
+                {
+                    "name": "Philipp A. Mohrenweiser",
+                    "email": "phiamo@googlemail.com"
+                }
+            ],
+            "description": "Easy integration of twitters bootstrap into symfony2",
+            "keywords": [
+                "bootstrap",
+                "bootstrap form",
+                "extra form",
+                "form",
+                "template"
+            ],
+            "time": "2015-11-27 15:18:23"
+        },
+        {
+            "name": "mopa/composer-bridge",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phiamo/MopaComposerBridge.git",
+                "reference": "58661a5c588ce9c3eff7d36c4030f6caa4de1ae2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phiamo/MopaComposerBridge/zipball/58661a5c588ce9c3eff7d36c4030f6caa4de1ae2",
+                "reference": "58661a5c588ce9c3eff7d36c4030f6caa4de1ae2",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/class-loader": ">=2.0.0",
+                "symfony/console": ">=2.0.0"
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Mopa\\Bridge\\Composer": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/phiamo/MopaComposerBridge/contributors"
+                },
+                {
+                    "name": "Philipp A. Mohrenweiser",
+                    "email": "phiamo@googlemail.com"
+                }
+            ],
+            "description": "Symfony2 Composer Bridge",
+            "homepage": "http://bootstrap.mohrenweiserpartner.de",
+            "keywords": [
+                "Symfony2",
+                "composer"
+            ],
+            "time": "2015-10-01 19:20:19"
         },
         {
             "name": "paragonie/random_compat",
@@ -1223,6 +1777,76 @@
                 "mailer"
             ],
             "time": "2015-06-06 14:19:39"
+        },
+        {
+            "name": "symfony/assetic-bundle",
+            "version": "v2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/assetic-bundle.git",
+                "reference": "d885ec8451d5a7b077bda81bb19ac9fbff9cdc76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/d885ec8451d5a7b077bda81bb19ac9fbff9cdc76",
+                "reference": "d885ec8451d5a7b077bda81bb19ac9fbff9cdc76",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/assetic": "~1.3",
+                "php": ">=5.3.0",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/dependency-injection": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
+            },
+            "conflict": {
+                "kriswallsmith/spork": "<=0.2",
+                "twig/twig": "<1.20"
+            },
+            "require-dev": {
+                "kriswallsmith/spork": "~0.3",
+                "patchwork/jsqueeze": "~1.0",
+                "symfony/class-loader": "~2.3|~3.0",
+                "symfony/css-selector": "~2.3|~3.0",
+                "symfony/dom-crawler": "~2.3|~3.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0",
+                "symfony/twig-bundle": "~2.3|~3.0"
+            },
+            "suggest": {
+                "kriswallsmith/spork": "to be able to dump assets in parallel",
+                "symfony/twig-bundle": "to use the Twig integration"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\AsseticBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Integrates Assetic into Symfony2",
+            "homepage": "https://github.com/symfony/AsseticBundle",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
+            ],
+            "time": "2015-11-17 09:45:47"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1930,6 +2554,57 @@
             "time": "2016-01-14 12:01:11"
         },
         {
+            "name": "twbs/bootstrap",
+            "version": "v3.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "81df608a40bf0629a1dc08e584849bb1e43e0b7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/81df608a40bf0629a1dc08e584849bb1e43e0b7a",
+                "reference": "81df608a40bf0629a1dc08e584849bb1e43e0b7a",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
+            ],
+            "time": "2015-11-24 19:37:05"
+        },
+        {
             "name": "twig/twig",
             "version": "v1.23.3",
             "source": {
@@ -2102,7 +2777,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "knplabs/knp-menu-bundle": 20,
+        "knplabs/knp-paginator-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

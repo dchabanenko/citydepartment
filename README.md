@@ -67,10 +67,27 @@ $ sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX app/cache app/logs
 $ sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX app/cache app/logs
 ```
 
+## Node and less installation
+
+You need nodejs and less installed to use bootstrap assets.
+
+Node installation:
+```
+$ sudo apt-get install node
+```
+
+Less install:
+```
+$ sudo npm install -g less
+```
+
+Then you need to assure that the folder /usr/local/lib/node_modules contains the less module
+and is properly configured in symfony's app/config.yml (section assetic.filters.less.node_paths)
+
 Then clear your cache and install assets for prod environment:
 
 ```
 $ app/console cache:clear --env=prod
 $ app/console assets:install web --symlink --env="prod"
-$ # app/console assetic:dump --env="prod" #to be updated (bootstrap configuration)
+$ app/console assetic:dump --env="prod"
 ```
