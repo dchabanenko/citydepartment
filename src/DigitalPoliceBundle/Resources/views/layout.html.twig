@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {% stylesheets
+        '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
+        '@DigitalPoliceBundle/Resources/public/css/main.css'
+        %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+        {% endstylesheets %}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}
+<div class="wrapper">
+    <div class="header navbar navbar-default">
+        <a href="#"><h1 class="header-title">Digital Police</h1></a>
+            <span class="header-userinfo">
+                    Hello, User!
+                    <a href="#">Log out</a>
+            </span>
+        <div class="clearfix"></div>
+        <span class="header-version">v.0.0.1</span>
+    </div>
+    <div class="clear"></div>
+        <div class="sidebar col-md-2">
+            <ul class="nav list-group">
+                <li>
+                    <a class="list-group-item active" href="{{ path('digital_police_homepage') }}">Home</a>
+                </li>
+                <li>
+                    <a class="list-group-item" href="#">Map</a>
+                </li>
+            </ul>
+        </div>
+    <div class="content col-lg-8 custom-col-lg-10 col-md-10 col-sm-12">
+        <div class="content col-lg-12 custom-col-lg-12 col-md-12 col-sm-12">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock body %}
+{% block javascripts %}
+    {% javascripts
+    '@BmatznerJQueryBundle/Resources/public/js/jquery.min.js'
+    '@MopaBootstrapBundle/Resources/public/bootstrap/js/tooltip.js'
+    '@MopaBootstrapBundle/Resources/public/bootstrap/js/*.js'
+    '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
+    '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-subnav.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+</body>
+</html>

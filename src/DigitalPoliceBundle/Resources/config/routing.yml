@@ -1,0 +1,3 @@
+digital_police_homepage:
+    path:     /
+    defaults: { _controller: DigitalPoliceBundle:Default:index }

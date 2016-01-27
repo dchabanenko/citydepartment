@@ -1,0 +1,18 @@
+.header-title {
+    width: 60%;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 2px;
+}
+
+.header-userinfo {
+    width: 25%;
+    float: right;
+    margin: 28px 35px 0 0 ;
+    text-align: right;
+}
+
+.header-version {
+    margin-left: 32px;
+    padding-bottom: 10px;
+}
