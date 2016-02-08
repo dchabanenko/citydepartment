@@ -4,6 +4,14 @@
     <div class="col-lg-12 text-center crimes-container" data-crimes="{{ crimes }}" data-heatmap="1">
         <h1>Перегляд злочинiв</h1>
         <div id="crime-map"></div>
+        <div class="crime-types-switch">
+            <form class="crime-type-form">
+                {% for crime_type in crime_types %}
+                    <input type="checkbox" class="crime-type-checkbox" name="crime_type[]" value="{{ crime_type.id }}">
+                    <label>{{ crime_type.title }}</label>
+                {% endfor %}
+            </form>
+        </div>
     </div>
 
 {% endblock content %}

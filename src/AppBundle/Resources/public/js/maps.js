@@ -58,4 +58,35 @@ $(window).ready(function() {
         heatmap.setData(testData);
     }
 
+    var getSelectedCrimeTypesUrlString = function() {
+        var crimeTypesCheckboxes = $('.crime-type-form').children('input');
+        var i;
+        var selectedCrimeTypesString = '';
+        for (i=0; i < crimeTypesCheckboxes.length; i++) {
+            if ($(crimeTypesCheckboxes[i]).prop('checked')) {
+                selectedCrimeTypesString = selectedCrimeTypesString + '&type[]=' + $(crimeTypesCheckboxes[i]).val();
+            }
+        }
+
+        return selectedCrimeTypesString;
+    };
+
+    var updateMapsData = function (data) {
+
+    };
+
+    $('.crime-type-checkbox').click(function (event) {
+        var url = '/app_dev.php/crimes';
+        var crimeTypeString = getSelectedCrimeTypesUrlString();
+        if (crimeTypeString) {
+            url = url + '?' + crimeTypeString;
+        }
+        $.ajax({
+            'url': url,
+            'success': function (data) {
+                updateMapsData(data);
+            }
+        });
+    });
+
 });
