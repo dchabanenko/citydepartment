@@ -32,6 +32,27 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * @Route("/polygons", name="polygons")
+     */
+    public function polygonsAction(Request $request)
+    {
+        $crimes = $this->getDoctrine()->getRepository('AppBundle:Crime')->findBy([], null, 500);
+        $crimeTypes = $this->getDoctrine()->getRepository('AppBundle:CrimeType')->findAll();
+
+        $encoders = array(new JsonEncoder());
+        $normalizers = array(new ObjectNormalizer());
+        $serializer = new Serializer($normalizers, $encoders);
+
+        $crimesArray = $this->serializeCrimesArray($crimes);
+
+        return $this->render('AppBundle:Default:polygon.html.twig', array(
+            'crimes' => $serializer->serialize($crimesArray, 'json'),
+            'crime_types' => $crimeTypes,
+        ));
+    }
+
+
     protected function serializeCrimesArray($crimes)
     {
         $crimesArray = [];

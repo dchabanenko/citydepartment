@@ -1,0 +1,35 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    <div class="col-lg-12 text-center crimes-container" data-crimes="{{ crimes }}" data-heatmap="1">
+        <h1>Перегляд злочинiв</h1>
+        <div id="crime-map"></div>
+        <div class="crime-types-switch">
+            <form class="crime-type-form">
+                {% for crime_type in crime_types %}
+                    <input type="checkbox" class="crime-type-checkbox" name="crime_type[]" value="{{ crime_type.id }}">
+                    <label>{{ crime_type.title }}</label>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block foot_script %}
+    {{ parent() }}
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHAqHJE-RqP_bl62qr5l_ytEQ9s4TSnXA&libraries=drawing,geometry,places"></script>
+    {% javascripts
+    '@AppBundle/Resources/public/js/heatmap.min.js'
+    '@AppBundle/Resources/public/js/gmaps-heatmap.js'
+    '@AppBundle/Resources/public/js/767.js'
+    '@AppBundle/Resources/public/js/768.js'
+    '@AppBundle/Resources/public/js/769.js'
+    '@AppBundle/Resources/public/js/770.js'
+    '@AppBundle/Resources/public/js/771.js'
+    '@AppBundle/Resources/public/js/772.js'
+    '@AppBundle/Resources/public/js/maps-polygon.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
